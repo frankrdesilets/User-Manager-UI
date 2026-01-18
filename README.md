@@ -12,7 +12,7 @@ The main view of the GUI is the Dashboard. User accounts and their properties ar
 The UI was built with JavaFX 22.0.1 and Scene Builder (a visual layout tool). I used JavaFX to give the application a modern look and feel (as opposed to Java Swing), and Scene Builder to design and easily manage the components of the UI. Maven was used as the build automation tool. I developed the application with Eclipse IDE 2023-12 4.30.0. File I/O was tested with JUnit test cases to ensure correct file loading, user writing, and incorrect format detection. The UI controls were tested manually.
 
 ## Motivation
-I built this user interface to showcase skills related to user interface design and development, including the use of JavaFX, Scene Builder, Maven, and CSS stylesheets, and to practice concepts I learned in my Algorithms class. I am passionate about UI/UX and used this project to learn more about design centered around user experience. 
+This project was built to explore user interface design and development using JavaFX, Scene Builder, Maven, and CSS, while modeling common user-management workflows. 
 
 ## Features
 -	User Properties
@@ -32,14 +32,12 @@ I built this user interface to showcase skills related to user interface design 
 1. Clone and import the repository to your Java IDE workspace. Because JavaFX and JUnit are Maven dependencies, they should not need to be added to the build path.
 2. Run the project (the main method is located in src/main/java/frankdesilets.User_Manager/UserManager.java).
 
-NOTE: I have run into a bug in JavaFX where on application launch an IllegalStateException is thrown stating that the location is not set. This is fixed by simply navigating to line 30 of UserManager.java and re-typing "main" in the loadFXML() method parameter and re-running. I also experienced an issue where JavaFX version 22.0.1 could not be run in the 2024 version of Eclipse, and when downgrading back to Eclipse 2023-12 4.30.0 the issue was fixed.
-
 ## How to Use
 
 ### Dashboard
 ![Dashboard](assets/dashboard.png)
 
-User accounts are managed in the Dashboard and their properties are listed in the table, one user per row. User properties include Email/ID (an account's unique identifier), First Name, Last Name, Role (a user's position in an organization, for example “Level 3 Engineer”), and Status (a user's account activity, for example “Active Employee”). Users are sorted in decending order by Role by default. 
+User accounts are managed in the Dashboard and their properties are listed in the table, one user per row. User properties include Email/ID (an account's unique identifier), First Name, Last Name, Role (a user's position in an organization, for example “Level 3 Engineer”), and Status (a user's account activity, for example “Active Employee”). Users are sorted in descending order by Role by default. 
 
 A user can be edited or deleted by interacting with that user’s “Edit” combo box (in the far-right column of the table) and choosing the appropriate option, as shown above. A user is deleted when “Delete User” is selected, and the view is switched to the Edit User form when “Edit User” is selected, which enables an existing user of the system to have their properties changed.
 
